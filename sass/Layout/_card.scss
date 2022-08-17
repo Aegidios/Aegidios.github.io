@@ -49,6 +49,39 @@
             margin-left: 15px;
             height: 75px;
             position: relative;
+            .heartIcon{
+                .like{
+                    font-family: "Font Awesome 6 Free";
+                    background-image: url(../../assets/fontawesome-free-6.1.1-web/svgs/regular/heart.svg);
+                    position: absolute;
+                    right: 30px;
+                    height: 25px;
+                    width: 25px;
+                    top: 30%;
+                }
+                @media (max-width:1023px){
+                    :active{
+                        /* background-image: url(../../assets/SVG/heartIcon.svg); */
+                        transition: all 1s;
+                        -webkit-mask: url(../../assets/fontawesome-free-6.1.1-web/svgs/solid/heart.svg) no-repeat 100% 100%;
+                        mask: url(../../assets/fontawesome-free-6.1.1-web/svgs/solid/heart.svg) no-repeat 100% 100%;
+                        -webkit-mask-size: cover;
+                        mask-size: cover;
+                        background: linear-gradient(to bottom, $colour-secondary 0%, $colour-primary 100%);
+                    }
+                }
+                @media (min-width:1024px){
+                    :hover{
+                        /* background-image: url(../../assets/SVG/heartIcon.svg) no-repeat 100% 100%; */
+                        transition: all 1s;
+                        -webkit-mask: url(../../assets/fontawesome-free-6.1.1-web/svgs/solid/heart.svg) no-repeat 100% 100%;
+                        mask: url(../../assets/fontawesome-free-6.1.1-web/svgs/solid/heart.svg) no-repeat 100% 100%;
+                        -webkit-mask-size: cover;
+                        mask-size: cover;
+                        background: linear-gradient(to bottom, $colour-secondary 0%, $colour-primary 100%);
+                    }
+                }
+            }
         }
         a{
             text-decoration: none;
