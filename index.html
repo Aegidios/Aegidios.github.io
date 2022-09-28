@@ -1,187 +1,244 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OpenClassRoomsP2</title>
-    <link rel="icon" href="./assets/logo/ohmyfood.png" />
-    <link rel="stylesheet" href="./assets/fontawesome-free-6.1.1-web/css/all.min.css">
-    <link rel="stylesheet" href="./assets/styles/styles.css">
-</head>
-<body>
-    <div class="preloader">
-        <span class="loader"></span>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Reservation</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="shortcut icon" href="assets/images/FavIcon.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/modal.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      href="https://fonts.googleapis.com/css?family=DM+Sans"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="topnav" id="myTopnav">
+          <div class="header-logo">
+            <img alt="logo" src="assets/images/Logo.png"/>
+          </div>
+          <div class="main-navbar">
+            
+            <a href="#" class="active"><span>Accueil</span></a>
+            <a href="#"><span>Détails de l'évènement</span></a>
+            <a href="#"><span>À propos</span></a>
+            <a href="#"><span>Contact</span></a>
+            <a href="#"><span>Évènements passés</span></a>
+            <a href="javascript:void(0);" class="icon" onclick="editNav()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+      
     </div>
-    <header>
-        <img src="./assets/logo/ohmyfood.png" alt="Logo Du Restaurant">
-    </header>
-    <section>
-        <aside class="location">
-            <i class="fa-solid fa-location-dot"></i>
-            <span>
-                Paris, Belleville
-            </span>
-        </aside>
-        <article class="welcome_title">
-            <h1>
-                Réservez le menu qui vous convient
-            </h1>
-            <p>
-                Découvrez des restaurants d'exception, sélectionnés par nos soins.
-            </p>
-            <a href="#">Explorer nos restaurants</a>
-        </article>
-    </section>
-
-    <section class="stepper">
-        <h2>
-            Fonctionnement
-        </h2>
-        <ol class="stepper__card">
-            <li class="stepper__card__item">
-                <a href="">
-                    <span class="stepper__card__item__number">
-                        1
-                    </span>
-                    <i class="fa-solid fa-mobile-screen"></i>
-                        Choisissez un restaurant
-                </a>
-            </li>
-            <li class="stepper__card__item">
-                <a href="">
-                    <span class="stepper__card__item__number">
-                        2
-                    </span>
-                    <i class="fa-solid fa-list-ul"></i>
-                        Composez votre menu
-                </a>
-            </li>
-            <li class="stepper__card__item">
-                <a href="">
-                    <span class="stepper__card__item__number">
-                        3
-                    </span>
-                    <i class="fa-solid fa-store"></i>
-                        Dégustez au restaurant
-                </a>
-            </li>
-        </ol>
-    </section>
-
-    <section class="restaurants">
-        <h2>
-            Restaurants
-        </h2>
-        <ul class="cards">
-            <li class="card">
-                <a href="./pages/menulapalettedugout.html">
-                    <div class="card__picture">
-                        <img src="./assets/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Plat de la Palette du Goût">
-                        <p class="card__picture__info">
-                            Nouveau
-                        </p>
-                    </div>
-                    <div class="card__infos">
-                        <p class="card__title">
-                            La palette du goût
-                        </p>
-                        <p class="card__location">
-                            Ménilmontant
-                        </p>
-                        <a class="heartIcon">
-                            <span class="like"></span>
-                        </a>
-                    </div>
-                </a>
-            </li>
-            <li class="card">
-                <a href="./pages/menulanoteenchantee.html">
-                    <div class="card__picture">
-                        <img src="./assets/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Plat de la Note enchantée">
-                        <p class="card__picture__info">
-                            Nouveau
-                        </p>
-                    </div>
-                    <div class="card__infos">
-                        <p class="card__title">
-                            La note enchantée
-                        </p>
-                        <p class="card__location">
-                            Charonne
-                        </p>
-                        <a class="heartIcon">
-                            <span class="like"></span>
-                        </a>
-                    </div>
-                </a>
-            </li>
-            <li class="card">
-                <a href="./pages/menualafrancaise.html">
-                    <div class="card__picture">
-                        <img src="./assets/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Plat du restaurant A la Française">
-                    </div>
-                    <div class="card__infos">
-                        <p class="card__title">
-                            A la française
-                        </p>
-                        <p class="card__location">
-                            Cité Rouge
-                        </p>
-                        <a class="heartIcon">
-                            <span class="like"></span>
-                        </a>
-                    </div>
-                </a>
-            </li>
-            <li class="card">
-                <a href="./pages/menuledelicedessens.html">
-                    <div class="card__picture">
-                        <img src="./assets/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Plat du restaurant le Délice des Sens">
-                    </div>
-                    <div class="card__infos">
-                        <p class="card__title">
-                            Le délice des sens
-                        </p>
-                        <p class="card__location">
-                            Folie-Méricourt
-                        </p>
-                        <a class="heartIcon">
-                            <span class="like"></span>
-                        </a>
-                    </div>
-                </a>
-            </li>
-        </ul>
-    </section>
-    <footer class="footer">
-        <div class="footer__logo">
-            <img src="./assets/logo/ohmyfood@2x.svg" alt="Logo Du Restaurant">
+    <main>
+      <div class="hero-section">
+        <div class="hero-content">
+          <h1 class="hero-headline">
+            Marathon national<br>
+            de jeux vidéos
+          </h1>
+          <p class="hero-text">
+            Vous aimez jouer ? Notre prochain évènement gaming est ouvert
+            aux réservations... Places limitées !
+          </p>
+          <button class="btn-signup modal-btn">
+            je m'inscris
+          </button>
         </div>
-        <ul>
-            <li>
-                <a href="#">
-                    <i class="fa-solid fa-utensils"></i>
-                    Proposer un restaurant
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fa-solid fa-handshake-angle"></i>
-                    Devenir partenaire
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    Mentions légales
-                </a>
-            </li>
-            <li>
-                <a href="mailto:contact@ohmyfood.com?subject=NousContacter">
-                    Contact
-                </a>
-            </li>
-        </ul>
+        <div class="hero-img">
+          <img src="./assets/images/bg_img.jpg" alt="img" />
+        </div>
+        <button class="btn-signup modal-btn">
+          je m'inscris
+        </button>
+      </div>
+
+      <div class="bground">
+        <div class="content">
+          <span class="close"></span>
+          <div class="modal-body">
+            <form
+              name="reserve"
+              action="index.html"
+              method="get"
+              onsubmit="return validate();"
+            >
+              <div
+                class="formData">
+                <label class="firstNameLabel" for="first">Prénom</label><br>
+                <input
+                  class="text-control"
+                  type="text"
+                  id="first"
+                  name="first"
+                  minlength="2"
+                /><br>
+                <span class="error" id="firstNameError"></span>
+              </div>
+              <div
+                class="formData">
+                <label class="lastNameLabel" for="last">Nom</label><br>
+                <input
+                  class="text-control"
+                  type="text"
+                  id="last"
+                  name="last"
+                /><br>
+                <span class="error" id="lastNameError"></span>
+              </div>
+              <div
+                class="formData">
+                <label class="emailLabel" for="email">E-mail</label><br>
+                <input
+                  class="text-control"
+                  type="email"
+                  id="email"
+                  name="email"
+                /><br>
+                <span class="error" id="emailError"></span>
+              </div>
+              <div
+                class="formData">
+                <label class="birthdateLabel" for="birthdate">Date de naissance</label><br>
+                <input
+                  class="text-control"
+                  type="date"
+                  id="birthdate"
+                  name="birthdate"
+                  max="2010-12-31"
+                  min="1952-01-01"
+                /><br>
+                <span class="error" id="birthdateError"></span>
+              </div>
+              <div
+                class="formData">
+                <label class="quantityLabel" for="quantity">À combien de tournois GameOn avez-vous déjà participé ?</label><br>
+                <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
+                <span class="error" id="quantityError"></span>
+              </div>
+              <p class="text-label">A quel tournoi souhaitez-vous participer cette année ?</p>
+              <div
+                class="formData">
+                <input
+                  class="checkbox-input radio-input"
+                  type="radio"
+                  id="location1"
+                  name="location"
+                  value="New York"
+                />
+                <label class="checkbox-label" for="location1">
+                  <span class="checkbox-icon"></span>
+                  New York</label
+                >
+                <input
+                  class="checkbox-input radio-input"
+                  type="radio"
+                  id="location2"
+                  name="location"
+                  value="San Francisco"
+                />
+                <label class="checkbox-label" for="location2">
+                  <span class="checkbox-icon"></span>
+                  San Francisco</label
+                >
+                <input
+                  class="checkbox-input radio-input"
+                  type="radio"
+                  id="location3"
+                  name="location"
+                  value="Seattle"
+                />
+                <label class="checkbox-label" for="location3">
+                  <span class="checkbox-icon"></span>
+                  Seattle</label
+                >
+                <input
+                  class="checkbox-input radio-input"
+                  type="radio"
+                  id="location4"
+                  name="location"
+                  value="Chicago"
+                />
+                <label class="checkbox-label" for="location4">
+                  <span class="checkbox-icon"></span>
+                  Chicago</label
+                >
+                <input
+                  class="checkbox-input radio-input"
+                  type="radio"
+                  id="location5"
+                  name="location"
+                  value="Boston"
+                />
+                <label class="checkbox-label" for="location5">
+                  <span class="checkbox-icon"></span>
+                  Boston</label
+                >
+                <input
+                  class="checkbox-input radio-input"
+                  type="radio"
+                  id="location6"
+                  name="location"
+                  value="Portland"
+                />
+                <label class="checkbox-label" for="location6">
+                  <span class="checkbox-icon"></span>
+                  Portland</label
+                >
+              </div>
+              <span class="error" id="radioError"></span>
+
+              <div
+                class="formData">
+                <input
+                  class="checkbox-input"
+                  type="checkbox"
+                  id="checkbox1"
+                />
+                <label class="checkbox2-label" for="checkbox1">
+                  <span class="checkbox-icon"></span>
+                  J'ai lu et accepté les conditions d'utilisation.
+                </label>
+                <br>
+                <span class="error" id="checkboxError"></span>
+                
+                <input class="checkbox-input" type="checkbox" id="checkbox2" />
+                <label class="checkbox2-label" for="checkbox2">
+                  <span class="checkbox-icon"></span>
+                  Je Je souhaite être prévenu des prochains évènements.
+                </label>
+                <br>
+                
+              </div>
+              <input
+                class="btn-submit button"
+                type="submit"
+                value="C'est parti"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="bground2">
+        <div class="content">
+          <span class="close2"></span>
+          <div class="modal-body2">
+            <h1>Merci pour votre inscription</h1>
+            <input
+                class="btn-submit button"
+                type="button"
+                id="buttonClose"
+                value="Fermer"
+              />
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p class="copyrights">
+        Copyright 2014 - 2022, GameOn Inc.
+      </p>
     </footer>
-</body>
+    <script src="assets/js/modal.js"></script>
+  </body>
 </html>
